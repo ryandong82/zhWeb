@@ -1,121 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>博雅总裁商学院</title>
-    <meta name="Keywords" content="博雅总裁商学院,博雅总裁俱乐部,博雅私人董事会,博雅投资家高端项目,博雅聚娴女性学堂,博雅后EMBA高端项目,博雅国学智慧总裁精修班,博雅人,北大博雅总裁班，博雅资源汇">
-    <meta name="Description" content="博雅总裁商学院成立于2008年，从诞生起就继承了百年学府北京大学的优秀基因，经过六年的磨砺，博雅总裁商学院已经发展成为有完善课程体系、成熟运营团队的一流商学院。是目前国内最富盛名、最具远见的企业家商学院之一。 博雅总裁商学院设立博雅总裁俱乐部，采取线上线下结合的形式，志在搭建最优质的学习平台，最有影响力的商脉平台，最有效的投融资平台。" >
-    <link rel="shortcut icon" href="./statics/images/boya/logo.ico">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="baidu-site-verification" content="s3poCFU7hr" />
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="./statics/plugin/Bootstrap/css/bootstrap.min.css?version=3.3.2">
-    <link rel="stylesheet" href="./statics/css/boya/layout.css">
-    <script type="text/javascript" src="./statics/plugin/jquery-1.11.1.min.js"></script>
-    <!--[if lt IE 9]>
-    <script src="./statics/plugin/html5shiv.min.js"></script>
-    <script src="./statics/plugin/respond.min.js"></script>
-    <![endif]-->
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" type="text/css" href="./statics/css/boya/ie8.css">
-    <![endif]-->
-    <!--[if lte IE 6]>
-    <link rel="stylesheet" type="text/css" href="./statics/plugin/Bootstrap/css/bootstrap-ie6.min.css">
-    <link rel="stylesheet" type="text/css" href="./statics/plugin/Bootstrap/css/ie.css">
-    <![endif]-->
+    <title>中和商学院</title>
+    <?php
+    include("head.php");
+    ?>
 </head>
 <body>
-<!-- 顶部 start-->
-<!--header>
-    <div class="header">
-        <div class="container">
-            <a href="http://www.boyaceo.com/about-39.html" class="pull-left text-muted btn">证书验证</a>
-            <a href="http://r.boyaceo.com" class="pull-left text-muted btn">报备系统</a>
-            <form action="http://www.boyaceo.com/index.php" method="get" class="form-horizontal header header_search text-right" role="search" target="_blank" >
-                <button type="submit" class="btn btn-info btn-sm pull-right" style="margin-left:5px;">
-                    <span class='glyphicon glyphicon-search'></span>
-                </button>
-                <div class="form-group col-md-2 col-xs-11 pull-right">
-                    <input type="hidden" name="m" value="search"/>
-                    <input type="hidden" name="c" value="index"/>
-                    <input type="hidden" name="a" value="init"/>
-                    <input type="hidden" name="typeid" value="58"/>
-                    <input type="hidden" name="siteid" value="1" >
-                    <input type="text" class="form-control"  name="q" placeholder="请输入关键字" x-webkit-speech>
-                </div>
-            </form>
-        </div>
-    </div>
-</header-->
-<!-- 顶部 end-->
-
-<!-- 导航 start-->
-<nav>
-    <div class="navbar" role="navigation" id="index_top" style="height:130px">
-        <div class="container">
-            <div class='ie8_hidden'>
-                <a href="./index.html"><img  src="./statics/images/boya/boya_logo.png" class="visible-lg"></a>
-                <a href="./index.html"><img  src="./statics/images/boya/sm-logo.jpg" class="hidden-lg"></a>
-            </div>
-            <div class="clearfix"></div>
-            <div class="navbar-header">
-                <a class="navbar-brand" href="./index.html">
-                    <img  src="./statics/images/boya/boya_logo.png" class="img-responsive visible-lg"><img src="./statics/images/boya/sm-logo.jpg" class="img-responsive hidden-lg"></a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-                    <span class="glyphicon glyphicon-list"></span>
-                </button>
-            </div>
-            <div class="navbar-right" style="margin:0;padding-top: 60px;"">
-                <div class="clearfix  hidden-xs">
-                    <img src="./statics/images/boya/boya_06.jpg" class="pull-right wechat_button">
-                    <img src="./statics/images/boya/weixin_img.png" class='wechat_img' >
-                    <script type="text/javascript">
-                        $('.wechat_button,.wechat_img').hover(function(){
-                            $('.wechat_img').show();
-                        },function(){
-                            $('.wechat_img').hide();
-                        })
-                    </script>
-                    <p class="pull-right text-warning">
-                        <span class="h5" style="font-size:13px;">博雅决定高度&nbsp;&nbsp;平台成就未来</span>
-                        <!-- <span class="text-primary h4">4000－858－602</span> -->
-                    </p>
-                </div>
-                <ul class="navbar-nav  collapse navbar-collapse" id="navbar-collapse-1">
-                    <li>
-                        <a href="./index.html" class='color'>首页</a>
-                    </li>
-                    <li>
-                        <a href="./about-1.html" class='color'>学院介绍</a>
-                    </li>
-                    <li>
-                        <a href="http://www.boyaceo.com/courses-10-1.html" class='color'>精品课程</a>
-                    </li>
-                    <li>
-                        <a href="http://www.boyaceo.com/teachers-15-1.html" class='color'>师资</a>
-                    </li>
-                    <li>
-                        <a href="http://www.boyaceo.com/about-44.html" class='color'>课程简章</a>
-                    </li>
-                    <li>
-                        <a href="http://www.boyaceo.com/list-9-1.html" class='color'>新闻中心</a>
-                    </li>
-                    <li>
-                        <a href="http://www.boyaceo.com/index.php?m=special&c=index&specialid=7&pc_hash=5hLyMm" class='color'>博雅私董会</a>
-                    </li>
-                    <li>
-                        <a href="http://www.boyaceo.com/about-46.html" class='color'>联系我们</a>
-                    </li>
-                    <!-- <li><a href="javascript:void(0);" class="fuzzy99 hidden-xs" target="_self">联系我们</a></li> -->
-                    <!-- <li><a href="javascript:void(0);" onclick="boya_application()" target="_self">报名</a></li> -->
-
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
+<?php
+include("main_nav.php");
+?>
 <!-- 导航 end--><base target="_blank" />
 <style>
     /*首页隐藏talk99*/

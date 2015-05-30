@@ -1,129 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>学院介绍 - 博雅总裁商学院</title>
-    <meta name="Keywords" content="学院">
-    <meta name="Description" content="博雅总裁商学院成立于2008年，从诞生起就继承了百年学府北京大学的优秀基因，经过六年的磨砺，博雅总裁商学院已经发展成为有完善课程体系、成熟运营团队的一流商学院。是目前国内最富盛名、最具远见的企业家商学院之一。 博雅总裁商学院设立博雅总裁俱乐部，采取线上线下结合的形式，志在搭建最优质的学习平台，最有影响力的商脉平台，最有效的投融资平台。" >
-    <link rel="shortcut icon" href="./statics/images/boya/logo.ico">
-    <meta http-equiv="Content-Language" content="zh-cn">
-    <meta name="baidu-site-verification" content="s3poCFU7hr" />
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="./statics/plugin/Bootstrap/css/bootstrap.min.css?version=3.3.2">
-    <link rel="stylesheet" href="./statics/css/boya/layout.css">
-    <script type="text/javascript" src="./statics/plugin/jquery-1.11.1.min.js"></script>
-    <!--[if lt IE 9]>
-    <script src="./statics/plugin/html5shiv.min.js"></script>
-    <script src="./statics/plugin/respond.min.js"></script>
-    <![endif]-->
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" type="text/css" href="./statics/css/boya/ie8.css">
-    <![endif]-->
-    <!--[if lte IE 6]>
-    <link rel="stylesheet" type="text/css" href="./statics/plugin/Bootstrap/css/bootstrap-ie6.min.css">
-    <link rel="stylesheet" type="text/css" href="./statics/plugin/Bootstrap/css/ie.css">
-    <![endif]-->
+    <title>学院介绍 - 中和商学院</title>
+    <?php
+    include("head.php");
+    ?>
 </head>
 <body>
-<!-- 顶部 start-->
-<!-- 顶部 start-->
-<!--header>
-    <div class="header">
-        <div class="container">
-            <a href="http://www.boyaceo.com/about-39.html" class="pull-left text-muted btn">证书验证</a>
-            <a href="http://r.boyaceo.com" class="pull-left text-muted btn">报备系统</a>
-            <form action="http://www.boyaceo.com/index.php" method="get" class="form-horizontal header header_search text-right" role="search" target="_blank" >
-                <button type="submit" class="btn btn-info btn-sm pull-right" style="margin-left:5px;">
-                    <span class='glyphicon glyphicon-search'></span>
-                </button>
-                <div class="form-group col-md-2 col-xs-11 pull-right">
-                    <input type="hidden" name="m" value="search"/>
-                    <input type="hidden" name="c" value="index"/>
-                    <input type="hidden" name="a" value="init"/>
-                    <input type="hidden" name="typeid" value="58"/>
-                    <input type="hidden" name="siteid" value="1" >
-                    <input type="text" class="form-control"  name="q" placeholder="请输入关键字" x-webkit-speech>
-                </div>
-            </form>
-        </div>
-    </div>
-</header-->
-<!-- 顶部 end-->
 
-<!-- 导航 start-->
-<nav>
-    <div class="navbar" role="navigation" id="index_top" style="height:130px">
-        <div class="container">
-            <div class='ie8_hidden'>
-                <a href="./index.html"><img  src="./statics/images/boya/boya_logo.png" class="visible-lg"></a>
-                <a href="./index.html"><img  src="./statics/images/boya/sm-logo.jpg" class="hidden-lg"></a>
-            </div>
-            <div class="clearfix"></div>
-            <div class="navbar-header">
-                <a class="navbar-brand" href="./index.html">
-                    <img  src="./statics/images/boya/boya_logo.png" class="img-responsive visible-lg"><img src="./statics/images/boya/sm-logo.jpg" class="img-responsive hidden-lg"></a>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-                    <span class="glyphicon glyphicon-list"></span>
-                </button>
-            </div>
-            <div class="navbar-right" style="margin:0;padding-top: 60px;"">
-            <div class="clearfix  hidden-xs">
-                <img src="./statics/images/boya/boya_06.jpg" class="pull-right wechat_button">
-                <img src="./statics/images/boya/weixin_img.png" class='wechat_img' >
-                <script type="text/javascript">
-                    $('.wechat_button,.wechat_img').hover(function(){
-                        $('.wechat_img').show();
-                    },function(){
-                        $('.wechat_img').hide();
-                    })
-                </script>
-                <p class="pull-right text-warning">
-                    <span class="h5" style="font-size:13px;">博雅决定高度&nbsp;&nbsp;平台成就未来</span>
-                    <!-- <span class="text-primary h4">4000－858－602</span> -->
-                </p>
-            </div>
-            <ul class="navbar-nav  collapse navbar-collapse" id="navbar-collapse-1">
-                <li>
-                    <a href="./index.html" class='color'>首页</a>
-                </li>
-                <li>
-                    <a href="http://www.boyaceo.com/about-1.html" class='color'>学院介绍</a>
-                </li>
-                <li>
-                    <a href="http://www.boyaceo.com/courses-10-1.html" class='color'>精品课程</a>
-                </li>
-                <li>
-                    <a href="http://www.boyaceo.com/teachers-15-1.html" class='color'>师资</a>
-                </li>
-                <li>
-                    <a href="http://www.boyaceo.com/about-44.html" class='color'>课程简章</a>
-                </li>
-                <li>
-                    <a href="http://www.boyaceo.com/list-9-1.html" class='color'>新闻中心</a>
-                </li>
-                <li>
-                    <a href="http://www.boyaceo.com/index.php?m=special&c=index&specialid=7&pc_hash=5hLyMm" class='color'>博雅私董会</a>
-                </li>
-                <li>
-                    <a href="http://www.boyaceo.com/about-46.html" class='color'>联系我们</a>
-                </li>
-                <!-- <li><a href="javascript:void(0);" class="fuzzy99 hidden-xs" target="_self">联系我们</a></li> -->
-                <!-- <li><a href="javascript:void(0);" onclick="boya_application()" target="_self">报名</a></li> -->
+<?php
+include("main_nav.php");
+?>
 
-            </ul>
-        </div>
-    </div>
-    </div>
-</nav>
-<!-- 导航 end-->	<!-- 导航下色条 start-->
+ <!-- 导航下色条 start-->
 <div class="nav_child_bg">
     <div class="container">
         <div class="container-child">
             <!-- 所属栏目 -->
             <h2 class="h2">
-                学院介绍					<span class="caret"></span>
+                学院介绍 <span class="caret"></span>
             </h2>
         </div>
     </div>
@@ -139,24 +34,32 @@
     <!-- 面包屑导航 -->
     <ol class="breadcrumb">
         <li>
-            <a href="./index.php">首页</a>
+            <a href="./index.html">首页</a>
         </li>
-        <li class="active"><a href="http://www.boyaceo.com/about-1.html">学院介绍</a> > </li>
+        <li class="active"><a href="./about-1.html">学院介绍</a> ></li>
     </ol>
     <!-- 标题 -->
     <h1 class="text-center h3">学院介绍</h1>
     <!-- 时间 -->
-    <p class="small text-muted text-center article_time"><small></small>
+    <p class="small text-muted text-center article_time">
+        <small></small>
     </p>
     <!-- 内容 -->
-    <article><div  class="article_content"><div align="center"><img alt="" src="./statics/images/boya/boya_logo.png" />&nbsp; &nbsp; &nbsp; &nbsp;<br />
-        &nbsp;</div>
-        <div><span style="font-family:微软雅黑;"><span style="font-size:14px;">&nbsp; &nbsp; &nbsp; &nbsp;</span></span><span style="font-size: 12px; font-family: 微软雅黑;"><span style="font-size:14px;">北京博雅学苑教育咨询有限公司旗下的博雅总裁商学院成立于2008年，</span></span><span style="font-family: 微软雅黑; font-size: 14px;">从诞生起就继承了百年学府北京大学的优秀基因，经过六年的磨砺，博雅总裁商学院已经发展成为有完善课程体系、成熟运营团队的一流商学院。是目前国内最富盛名、最具远见的企业家商学院之一。</span></div>
-        <div><span style="font-size:14px;"><span style="font-family:微软雅黑;">&nbsp; &nbsp; &nbsp; &nbsp;博雅总裁商学院整合国内外顶尖名校的优势教育资源，致力于为中国新经济时代的成长型企业和创新型企业家提供高端化、系统化、国际化的实战学习方案。拥有400多位国内外知名专家教授团队，每年培养4000多名企业家学员、并为上百家企事业单位或集团提供个性化培训。学院自2008年成立至今已经培养2万余名企业家学员，是国内最大的企业家研修平台。</span></span></div>
-        <div><span style="font-size:14px;"><span style="font-family:微软雅黑;">&nbsp; &nbsp; &nbsp; &nbsp;博雅总裁学院建立了非常成熟、全面的高端课程体系，尤其是在管理、金融、国学、地产、艺术品投资、女性修养、后EMBA等方面已经成为国内企业家研修的领跑者。</span></span></div>
-        <div><span style="font-size:14px;"><span style="font-family:微软雅黑;">&nbsp; &nbsp; &nbsp; &nbsp;博雅总裁商学院与美国波士顿大学、哈佛大学、斯坦福大学、日本早稻田大学、东京大学、剑桥大学、新加坡国立大学、南洋理工大学、香港中文大学等很多世界一流大学建立了战略合作关系，让中国的企业家共享世界一流的教育资源。</span></span></div>
-        <div><span style="font-size:14px;"><span style="font-family:微软雅黑;">&nbsp; &nbsp; &nbsp; 博雅总裁商学院设立博雅总裁俱乐部，采取线上线下结合的形式，志在搭建最优质的学习平台，最有影响力的商脉平台，最有效的投融资平台。</span></span></div>
-    </div></article>
+    <article>
+        <div class="article_content">
+            <div align="center"><img alt="" src="./statics/images/boya/boya_logo.png"/>&nbsp; &nbsp; &nbsp; &nbsp;<br/>
+                &nbsp;</div>
+            <p style="text-indent: 1cm">
+                党的十八大以来“改革”已经成为政府、企业主导方向，企业发展也进入新的阶段，面临许多新问题、新挑战，对企业管理者在综合能力、视野、领导力上有更高的要求，来引领企业获得更好更快发展。顺应这一趋势“中和商学院”邀请相关领域最具影响力专家学者为企业领导者传播与企业发展密切相关的形势分析、经营新理念和管理新经验，提升领导力；帮助企业领导者应对企业在发展中面临的挑战与机遇。</span>
+            </p>
+            <p style="text-indent: 1cm">
+                “中和商学院”秉承以推动企业发展为己任，汇聚全球华人领域最受企业管理者欢迎的专家学者、著名企业家及国家相关政策参与和解读的专家，从宏观经济、企业战略、领导管理、投资融资、人文视野等领域，纵论领先之道，共同传承管理精髓，引领商界创新。 进而驾驭全球化商业挑战，推动企业持续快速成长与发展。
+            </p>
+            <p style="text-indent: 1cm">
+            “中和商学院”以创造客户价值，引领企业变革为导向，组织推出培训项目主要有“中和论坛”和“企业定制”公开课、企业内训、企业游学、国学游学等。“中和商学院”致力于成为中国企业领导者的最佳学习平台，诚挚期待与您携手，共同推进中国企业的健康快速成长。
+            </p>
+        </div>
+    </article>
     <!-- 分享 start -->
     <div class="bdsharebuttonbox pull-right">
         <a href="#" class="bds_more" data-cmd="more"></a>
@@ -165,7 +68,8 @@
         <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
         <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
     </div>
-    <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","weixin","sqq","youdao"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","weixin","sqq","youdao"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    <script>window._bd_share_config = {"common": {"bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdMiniList": false, "bdPic": "", "bdStyle": "1", "bdSize": "16"}, "share": {}, "image": {"viewList": ["qzone", "tsina", "weixin", "sqq", "youdao"], "viewText": "分享到：", "viewSize": "16"}, "selectShare": {"bdContainerClass": null, "bdSelectMiniList": ["qzone", "tsina", "weixin", "sqq", "youdao"]}};
+    with (document)0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
     <!-- 分享 end -->
     <!-- 相关阅读 start-->
     <div class="relation_news">
@@ -187,7 +91,8 @@
                 <a href="http://www.boyaceo.com/new-13-56-1.html" class="default">商学院方略/PE项目组班主任许老师推荐《向前一步》</a>
             </li>
             <li class="list-group-item">
-                <a href="http://www.boyaceo.com/new-13-14-1.html" class="default">商学院运营总监曹老师推荐《壹玖壹壹：从鸦片战争到军阀混战的百年影像史》</a>
+                <a href="http://www.boyaceo.com/new-13-14-1.html"
+                   class="default">商学院运营总监曹老师推荐《壹玖壹壹：从鸦片战争到军阀混战的百年影像史》</a>
             </li>
         </ul>
     </div>
@@ -208,8 +113,9 @@
 <div class="sidebar course">
     <h5 style="background:#cf910a;padding:8px 35px 8px 15px;color:white;" class="clearfix text-center">
         <span class="glyphicon glyphicon-education pull-left" style="font-size:18px;"></span>
-        博雅总裁班招生简章分类
+        中和商学院招生简章分类
     </h5>
+
     <div class="sidebar-right">
         <ul class="list-group">
             <li class="list-group-item">
@@ -279,28 +185,40 @@
         <div class="row">
             <div class="teacher-single col-xs-6">
                 <a href="http://www.boyaceo.com/teacher-26-92-1.html" class="thumbnail">
-                    <img class='lazy' src="./statics/images/boya/t-face.jpg" data-original="./statics/images/boya/20140827114658159.jpg" style="width:80px!important;width:115px!important;"></a>
+                    <img class='lazy' src="./statics/images/boya/t-face.jpg"
+                         data-original="./statics/images/upload/20140827114658159.jpg"
+                         style="width:80px!important;width:115px!important;"></a>
+
                 <p class='text-center'>
-                    <a href="http://www.boyaceo.com/teacher-26-92-1.html" class="blue">吉姆·罗杰斯</a>
+                    <a href="http://www.boyaceo.com/teacher-26-92-1.html" class="blue">宋国青</a>
                 </p>
             </div>
             <div class="teacher-single col-xs-6">
                 <a href="http://www.boyaceo.com/teacher-30-54-1.html" class="thumbnail">
-                    <img class='lazy' src="./statics/images/boya/t-face.jpg" data-original="./statics/images/boya/20140826042518280.jpg" style="width:80px!important;width:115px!important;"></a>
+                    <img class='lazy' src="./statics/images/boya/t-face.jpg"
+                         data-original="./statics/images/upload/20140826042518280.jpg"
+                         style="width:80px!important;width:115px!important;"></a>
+
                 <p class='text-center'>
-                    <a href="http://www.boyaceo.com/teacher-30-54-1.html" class="blue">钱文忠</a>
+                    <a href="http://www.boyaceo.com/teacher-30-54-1.html" class="blue">林毅夫</a>
                 </p>
             </div>
             <div class="teacher-single col-xs-6">
                 <a href="http://www.boyaceo.com/teacher-30-66-1.html" class="thumbnail">
-                    <img class='lazy' src="./statics/images/boya/t-face.jpg" data-original="./statics/images/boya/20140827092612991.jpg" style="width:80px!important;width:115px!important;"></a>
+                    <img class='lazy' src="./statics/images/boya/t-face.jpg"
+                         data-original="./statics/images/upload/20140827092612991.jpg"
+                         style="width:80px!important;width:115px!important;"></a>
+
                 <p class='text-center'>
-                    <a href="http://www.boyaceo.com/teacher-30-66-1.html" class="blue">孟晓苏</a>
+                    <a href="http://www.boyaceo.com/teacher-30-66-1.html" class="blue">吴涛</a>
                 </p>
             </div>
             <div class="teacher-single col-xs-6">
                 <a href="http://www.boyaceo.com/teacher-30-58-1.html" class="thumbnail">
-                    <img class='lazy' src="./statics/images/boya/t-face.jpg" data-original="./statics/images/boya/20140826042911346.jpg" style="width:80px!important;width:115px!important;"></a>
+                    <img class='lazy' src="./statics/images/boya/t-face.jpg"
+                         data-original="./statics/images/upload/20140826042911346.jpg"
+                         style="width:80px!important;width:115px!important;"></a>
+
                 <p class='text-center'>
                     <a href="http://www.boyaceo.com/teacher-30-58-1.html" class="blue">陈淮</a>
                 </p>
@@ -315,26 +233,47 @@
     <h5 style="margin-bottom:15px;">
         <span class="bg-boya">其他栏目</span>
     </h5>
+
     <div class="list-group">
-        <a href="http://www.boyaceo.com/courses-10-1.html" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="课程">课程			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/courses-10-1.html" class="list-group-item list-group-item btn-tool 			"
+           data-toggle="tooltip" data-placement="left" title="" data-original-title="课程">课程 <span
+                class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/news-11-1.html" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="活动">活动			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/news-11-1.html" class="list-group-item list-group-item btn-tool 			"
+           data-toggle="tooltip" data-placement="left" title="" data-original-title="活动">活动 <span
+                class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/index.php?m=content&c=index&a=lists&catid=12" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="博雅人">博雅人			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/index.php?m=content&c=index&a=lists&catid=12"
+           class="list-group-item list-group-item btn-tool 			" data-toggle="tooltip" data-placement="left"
+           title="" data-original-title="博雅人">博雅人 <span class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/index.php?m=content&c=index&a=lists&catid=23" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="">－博雅人PDF			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/index.php?m=content&c=index&a=lists&catid=23"
+           class="list-group-item list-group-item btn-tool 			" data-toggle="tooltip" data-placement="left"
+           title="" data-original-title="">－博雅人PDF <span class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/news-24-1.html" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="">－博雅人			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/news-24-1.html" class="list-group-item list-group-item btn-tool 			"
+           data-toggle="tooltip" data-placement="left" title="" data-original-title="">－博雅人 <span
+                class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/news-13-1.html" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="悦读">悦读			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/news-13-1.html" class="list-group-item list-group-item btn-tool 			"
+           data-toggle="tooltip" data-placement="left" title="" data-original-title="悦读">悦读 <span
+                class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/news-14-1.html" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="公益">公益			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/news-14-1.html" class="list-group-item list-group-item btn-tool 			"
+           data-toggle="tooltip" data-placement="left" title="" data-original-title="公益">公益 <span
+                class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/videos-25-1.html" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="视线">视线			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/videos-25-1.html" class="list-group-item list-group-item btn-tool 			"
+           data-toggle="tooltip" data-placement="left" title="" data-original-title="视线">视线 <span
+                class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/list-40-1.html" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="学员心声">学员心声			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/list-40-1.html" class="list-group-item list-group-item btn-tool 			"
+           data-toggle="tooltip" data-placement="left" title="" data-original-title="学员心声">学员心声 <span
+                class="glyphicon glyphicon-send pull-right"></span>
         </a>
-        <a href="http://www.boyaceo.com/list-41-1.html" class="list-group-item list-group-item btn-tool 			"  data-toggle="tooltip" data-placement="left" title="" data-original-title="观点案例">观点案例			<span class="glyphicon glyphicon-send pull-right"></span>
+        <a href="http://www.boyaceo.com/list-41-1.html" class="list-group-item list-group-item btn-tool 			"
+           data-toggle="tooltip" data-placement="left" title="" data-original-title="观点案例">观点案例 <span
+                class="glyphicon glyphicon-send pull-right"></span>
         </a>
     </div>
 </div>
@@ -353,43 +292,50 @@
             <li class="list-group-item">
                 <small class="text-primary">
                     [
-                    2015-03-04					]</small>
+                    2015-03-04 ]
+                </small>
                 <a href="http://boyaceo.com?m=special&specialid=13">博雅创业家训练营</a>
             </li>
             <li class="list-group-item">
                 <small class="text-primary">
                     [
-                    2014-11-13					]</small>
+                    2014-11-13 ]
+                </small>
                 <a href="http://www.boyaceo.com/promotion/show_pe.php">博雅实战PE与资本运营董事长精品班</a>
             </li>
             <li class="list-group-item">
                 <small class="text-primary">
                     [
-                    2015-05-28					]</small>
+                    2015-05-28 ]
+                </small>
                 <a href="http://www.boyaceo.com/new-11-169-1.html">博雅创业大赛第一期“获扶持项目名单”</a>
             </li>
             <li class="list-group-item">
                 <small class="text-primary">
                     [
-                    2015-05-28					]</small>
+                    2015-05-28 ]
+                </small>
                 <a href="http://www.boyaceo.com/new-11-168-1.html">梦想创未来 ——博雅创业大赛隆重开赛</a>
             </li>
             <li class="list-group-item">
                 <small class="text-primary">
                     [
-                    2015-05-25					]</small>
+                    2015-05-25 ]
+                </small>
                 <a href="http://www.boyaceo.com/new-11-167-1.html">品茶论智慧 读书历人生 ——国学精修班5月份课外活动</a>
             </li>
             <li class="list-group-item">
                 <small class="text-primary">
                     [
-                    2015-05-13					]</small>
+                    2015-05-13 ]
+                </small>
                 <a href="http://www.boyaceo.com/new-24-166-1.html">私人董事会首席专家教练刘秉君：五月的思考——EMBA之后，企业家在混什么圈子</a>
             </li>
             <li class="list-group-item">
                 <small class="text-primary">
                     [
-                    2015-03-03					]</small>
+                    2015-03-03 ]
+                </small>
                 <a href="http://www.boyaceo.com/new-14-122-1.html">博雅公益：感谢有你！</a>
             </li>
         </ul>
@@ -448,22 +394,28 @@
         <h5>
             <span class="bg-boya">快速报名</span>
         </h5>
+
         <div class="sidebar-right clearfix">
             <p class="text-muted">
                 <span class="text-danger">*温馨提示</span>
                 <span style="font-size:12px;">博雅总裁商学院郑重承诺；所填信息仅用于招生，绝不外泄。</span>
             </p>
+
             <div class="col-xs-12">
-                <form action="http://chat118b.talk99.cn/chat/form?c=10034884&conf=4045&cmd=save" method="post" name="myform" id="application-2" class='form-horizontal'>
+                <form action="http://chat118b.talk99.cn/chat/form?c=10034884&conf=4045&cmd=save" method="post"
+                      name="myform" id="application-2" class='form-horizontal'>
                     <div class="form-group">
                         <label for="quickname">姓名</label>
-                        <input type="text" class="form-control input-sm" id="quickname" placeholder="Enter name" name="name"></div>
+                        <input type="text" class="form-control input-sm" id="quickname" placeholder="Enter name"
+                               name="name"></div>
                     <div class="form-group">
                         <label for="quickmobile">手机</label>
-                        <input type="text" class="form-control input-sm" id="quickmobile" placeholder="Enter mobile" name="mobile"></div>
+                        <input type="text" class="form-control input-sm" id="quickmobile" placeholder="Enter mobile"
+                               name="mobile"></div>
                     <div class="form-group">
                         <label for="quickid">身份证</label>
-                        <input type="text" class="form-control input-sm" id="exampleInputPassword1" placeholder="Enter identitycard"name="column1"></div>
+                        <input type="text" class="form-control input-sm" id="exampleInputPassword1"
+                               placeholder="Enter identitycard" name="column1"></div>
                     <div class="form-group">
                         <label for="quickproject">项目</label>
                         <select class="form-control input-sm" name="column0" id="quickproject">
@@ -486,7 +438,8 @@
                     </div>
                     <div class="form-group">
                         <label for="quickmessage">留言</label>
-                        <textarea class="form-control input-sm" id="quickmessage" placeholder="Enter message" name="column2"></textarea>
+                        <textarea class="form-control input-sm" id="quickmessage" placeholder="Enter message"
+                                  name="column2"></textarea>
                     </div>
                     <button type="submit" class="btn btn-warning center-block">提交</button>
                 </form>
@@ -496,12 +449,12 @@
 </div>
 <script type="text/javascript" src='./statics/plugin/jquery.pin.js'></script>
 <script type="text/javascript">
-    if($('#child_main').height()>1000)
-        $('.pinned-box').height($('#child_main').height()-$('.pinned-mark').height()-80);
+    if ($('#child_main').height() > 1000)
+        $('.pinned-box').height($('#child_main').height() - $('.pinned-mark').height() - 80);
     $(".pinned").pin({ containerSelector: ".pinned-box"
     })
 </script>
-<!-- 快速报名 end-->			</div>
+<!-- 快速报名 end-->            </div>
 <!-- 主体右边 end-->
 </div>
 <!-- row<tag>end -->
@@ -514,46 +467,61 @@
     <div class="container-child">
         <!-- 课程&分类 start-->
         <div class="hidden-xs" style="margin-top:15px;">
-            <style>.table .col-xs-11>a.btn{margin: 3px 0;}</style>
-            <div  style="border:1px solid #cf910a;">
+            <style>.table .col-xs-11 > a.btn {
+                margin: 3px 0;
+            }</style>
+            <div style="border:1px solid #cf910a;">
                 <table class="table" style="border-bottom:1px dashed #ccc;margin-bottom:0;">
                     <tr>
-                        <td class='col-xs-1 text-center' style="background:#cf910a;color:white; font-size:18px;height:100%;vertical-align:middle;border-top:0;">课程</td>
+                        <td class='col-xs-1 text-center'
+                            style="background:#cf910a;color:white; font-size:18px;height:100%;vertical-align:middle;border-top:0;">
+                            课程
+                        </td>
                         <td class="col-xs-11" style="border-top:0;">
-                            <a href="http://boyaceo.com?m=special&specialid=13"  class="btn btn-default btn-sm">创业训练</a>
-                            <a href="http://www.boyaceo.com/promotion/show_pe.php"  class="btn btn-default btn-sm">实战PE</a>
-                            <a href="http://www.boyaceo.com/promotion/show_emba.php"  class="btn btn-default btn-sm">经营方略</a>
-                            <a href="http://www.boyaceo.com/promotion/show_learned.php"  class="btn btn-default btn-sm">国学管理</a>
-                            <a href="http://www.boyaceo.com/promotion/show_finish.php"  class="btn btn-default btn-sm">博雅国学智慧</a>
-                            <a href="http://www.boyaceo.com/course-10-4-1.html"  class="btn btn-default btn-sm">博雅女性学堂</a>
-                            <a href="http://www.boyaceo.com/promotion/show_private.php"  class="btn btn-default btn-sm">博雅私董会</a>
-                            <a href="http://www.boyaceo.com/promotion/show_icbc.php"  class="btn btn-default btn-sm"></a>
-                            <a href="http://www.boyaceo.com/course-10-5-1.html"  class="btn btn-default btn-sm">博雅投资家</a>
-                            <a href="http://www.boyaceo.com/course-10-3-1.html"  class="btn btn-default btn-sm">博雅高端项目</a>
-                            <a href="http://www.boyaceo.com/course-10-8-1.html"  class="btn btn-default btn-sm">新加坡课程</a>
-                            <a href="http://www.boyaceo.com/course-10-15-1.html"  class="btn btn-default btn-sm">财务总监</a>
-                            <a href="http://www.boyaceo.com/course-10-16-1.html"  class="btn btn-default btn-sm">营销总监</a>
-                            <a href="http://www.boyaceo.com/course-10-17-1.html"  class="btn btn-default btn-sm"></a>
+                            <a href="http://boyaceo.com?m=special&specialid=13" class="btn btn-default btn-sm">创业训练</a>
+                            <a href="http://www.boyaceo.com/promotion/show_pe.php"
+                               class="btn btn-default btn-sm">实战PE</a>
+                            <a href="http://www.boyaceo.com/promotion/show_emba.php"
+                               class="btn btn-default btn-sm">经营方略</a>
+                            <a href="http://www.boyaceo.com/promotion/show_learned.php" class="btn btn-default btn-sm">国学管理</a>
+                            <a href="http://www.boyaceo.com/promotion/show_finish.php" class="btn btn-default btn-sm">博雅国学智慧</a>
+                            <a href="http://www.boyaceo.com/course-10-4-1.html"
+                               class="btn btn-default btn-sm">博雅女性学堂</a>
+                            <a href="http://www.boyaceo.com/promotion/show_private.php" class="btn btn-default btn-sm">博雅私董会</a>
+                            <a href="http://www.boyaceo.com/promotion/show_icbc.php" class="btn btn-default btn-sm"></a>
+                            <a href="http://www.boyaceo.com/course-10-5-1.html" class="btn btn-default btn-sm">博雅投资家</a>
+                            <a href="http://www.boyaceo.com/course-10-3-1.html"
+                               class="btn btn-default btn-sm">博雅高端项目</a>
+                            <a href="http://www.boyaceo.com/course-10-8-1.html" class="btn btn-default btn-sm">新加坡课程</a>
+                            <a href="http://www.boyaceo.com/course-10-15-1.html" class="btn btn-default btn-sm">财务总监</a>
+                            <a href="http://www.boyaceo.com/course-10-16-1.html" class="btn btn-default btn-sm">营销总监</a>
+                            <a href="http://www.boyaceo.com/course-10-17-1.html" class="btn btn-default btn-sm"></a>
                         </td>
                     </tr>
 
                 </table>
                 <table class="table" style="margin-bottom:0;border-top:none;">
                     <tr>
-                        <td class='col-xs-1 text-center' style="background:#cf910a;color:white; font-size:18px;padding:13px 0;vertical-align:middle;border-top:0;">分类</td>
+                        <td class='col-xs-1 text-center'
+                            style="background:#cf910a;color:white; font-size:18px;padding:13px 0;vertical-align:middle;border-top:0;">
+                            分类
+                        </td>
                         <td class="col-xs-11" style="border-top:0;">
-                            <a href="http://www.boyaceo.com/course-10-5-1.html"  class="btn btn-default btn-sm">董 事 长</a>
-                            <a href="http://www.boyaceo.com/course-10-12-1.html"  class="btn btn-default btn-sm">总  裁</a>
-                            <a href="http://www.boyaceo.com/course-10-10-1.html"  class="btn btn-default btn-sm">总 经 理</a>
-                            <a href="http://www.boyaceo.com/course-10-10-1.html"  class="btn btn-default btn-sm">中层管理者</a>
-                            <a href="http://www.boyaceo.com/course-10-10-1.html"  class="btn btn-default btn-sm">职业经理人</a>
-                            <a href="http://www.boyaceo.com/course-10-11-1.html"  class="btn btn-default btn-sm">金融行业</a>
-                            <a href="http://www.boyaceo.com/course-10-3-1.html"  class="btn btn-default btn-sm">企业合伙人</a>
-                            <a href="http://www.boyaceo.com/course-10-2-1.html"  class="btn btn-default btn-sm">公司股东</a>
-                            <a href="http://www.boyaceo.com/course-10-6-1.html"  class="btn btn-default btn-sm">董 事</a>
-                            <a href="http://www.boyaceo.com/course-10-3-1.html"  class="btn btn-default btn-sm">房地产总裁</a>
-                            <a href="http://www.boyaceo.com/course-10-3-1.html"  class="btn btn-default btn-sm">高 管</a>
-                            <a href="http://www.boyaceo.com/course-10-4-1.html"  class="btn btn-default btn-sm">魅力女性</a>
+                            <a href="http://www.boyaceo.com/course-10-5-1.html" class="btn btn-default btn-sm">董 事 长</a>
+                            <a href="http://www.boyaceo.com/course-10-12-1.html" class="btn btn-default btn-sm">总 裁</a>
+                            <a href="http://www.boyaceo.com/course-10-10-1.html" class="btn btn-default btn-sm">总 经
+                                理</a>
+                            <a href="http://www.boyaceo.com/course-10-10-1.html"
+                               class="btn btn-default btn-sm">中层管理者</a>
+                            <a href="http://www.boyaceo.com/course-10-10-1.html"
+                               class="btn btn-default btn-sm">职业经理人</a>
+                            <a href="http://www.boyaceo.com/course-10-11-1.html" class="btn btn-default btn-sm">金融行业</a>
+                            <a href="http://www.boyaceo.com/course-10-3-1.html" class="btn btn-default btn-sm">企业合伙人</a>
+                            <a href="http://www.boyaceo.com/course-10-2-1.html" class="btn btn-default btn-sm">公司股东</a>
+                            <a href="http://www.boyaceo.com/course-10-6-1.html" class="btn btn-default btn-sm">董 事</a>
+                            <a href="http://www.boyaceo.com/course-10-3-1.html" class="btn btn-default btn-sm">房地产总裁</a>
+                            <a href="http://www.boyaceo.com/course-10-3-1.html" class="btn btn-default btn-sm">高 管</a>
+                            <a href="http://www.boyaceo.com/course-10-4-1.html" class="btn btn-default btn-sm">魅力女性</a>
                         </td>
                     </tr>
                 </table>
@@ -570,27 +538,38 @@
         <div id="notGaps" class='well'>
             <ul>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402034837621.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402034837621.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402034900828.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402034900828.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402035220900.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402035220900.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402035406529.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402035406529.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402035427724.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402035427724.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402035455155.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402035455155.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040724296.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040724296.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040744710.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040744710.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040804214.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040804214.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040826709.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040826709.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
                 <li>
-                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040845330.jpg" style="width:250px;height:156px;" class="lazy"></li>
+                    <img data-original="http://www.boyaceo.com/uploadfile/2015/0402/20150402040845330.jpg"
+                         style="width:250px;height:156px;" class="lazy"></li>
             </ul>
         </div>
         <script src="./statics/plugin/notGaps.js"></script>
@@ -611,7 +590,9 @@
 </div>
 <!-- 页脚 　start-->
 <footer>
-    <style>.bg-footer a,.bg-footer p,.bg-footer span{color:white;}</style>
+    <style>.bg-footer a, .bg-footer p, .bg-footer span {
+        color: white;
+    }</style>
     <div style="background:#cf910a;padding:30px 0;" class="bg-footer">
         <div class='container text-center text-muted'>
             <p>
@@ -625,10 +606,12 @@
                 &nbsp;｜&nbsp;
                 <a href="">网站地图</a>
             </p>
+
             <p>
                 联系电话：
                 <span class="text-primary h4">400－876－1791</span>
             </p>
+
             <p>
                 Copyright@2009-2014 boyaceo.com All RightReserved [京ICP备10037530号－１]
             </p>
@@ -664,6 +647,7 @@
                     <!-- 开始申请内容 start-->
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-3 control-label">感兴趣的项目</label>
+
                         <div class="col-sm-7">
                             <select class="form-control" name="column0">
                                 <option value="">选择 -项目</option>
@@ -686,16 +670,21 @@
                     </div>
                     <div class="form-group">
                         <label for="inputName" class="col-sm-3 control-label">姓名</label>
+
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputName" placeholder="Enter name" name="name"></div>
+                            <input type="text" class="form-control" id="inputName" placeholder="Enter name" name="name">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="inputPhone" class="col-sm-3 control-label">电话</label>
+
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputPhone" placeholder="Enter phone" name="mobile"></div>
+                            <input type="text" class="form-control" id="inputPhone" placeholder="Enter phone"
+                                   name="mobile"></div>
                     </div>
                     <div class="form-group">
                         <label for="inputPassword3" class="col-sm-3 control-label">性别</label>
+
                         <div class="col-sm-7">
                             <div class="radio-inline">
                                 <label class="text-muted">
@@ -710,23 +699,31 @@
                     </div>
                     <div class="form-group">
                         <label for="inputAge" class="col-sm-3 control-label">年龄</label>
+
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputAge" placeholder="Enter age" name="column1"></div>
+                            <input type="text" class="form-control" id="inputAge" placeholder="Enter age"
+                                   name="column1"></div>
                     </div>
                     <div class="form-group">
                         <label for="inputCompany" class="col-sm-3 control-label">公司</label>
+
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputCompany" placeholder="Enter company" name="column2"></div>
+                            <input type="text" class="form-control" id="inputCompany" placeholder="Enter company"
+                                   name="column2"></div>
                     </div>
                     <div class="form-group">
                         <label for="inputDuty" class="col-sm-3 control-label">职务</label>
+
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputDuty" placeholder="Enter duty" name="column3"></div>
+                            <input type="text" class="form-control" id="inputDuty" placeholder="Enter duty"
+                                   name="column3"></div>
                     </div>
                     <div class="form-group">
                         <label for="inputPc" class="col-sm-3 control-label">所在省市</label>
+
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="inputPc" placeholder="Enter province and city" name="column4"></div>
+                            <input type="text" class="form-control" id="inputPc" placeholder="Enter province and city"
+                                   name="column4"></div>
                     </div>
                     <!-- 开始申请内容 end -->
                 </div>
@@ -743,21 +740,21 @@
                             required: true
                         },
                         'mobile': {
-                            required:true,
-                            number:true ,
+                            required: true,
+                            number: true,
                             minlength: 11
                         },
                         'column0': {
                             required: true,
                         },
-                        'column2':{
+                        'column2': {
                             minlength: 4
                         },
-                        'column3':{
+                        'column3': {
                             minlength: 2
                         },
-                        'column4':{
-                            minlength:2
+                        'column4': {
+                            minlength: 2
                         }
                     }
                 });
@@ -767,21 +764,21 @@
                             required: true
                         },
                         'mobile': {
-                            required:true,
-                            number:true ,
+                            required: true,
+                            number: true,
                             minlength: 11
                         },
                         'column0': {
                             required: true,
                         },
-                        'column2':{
+                        'column2': {
                             minlength: 4
                         },
-                        'column3':{
+                        'column3': {
                             minlength: 2
                         },
-                        'column4':{
-                            minlength:2
+                        'column4': {
+                            minlength: 2
                         }
                     }
                 });
@@ -789,7 +786,8 @@
             <!-- 在线申请 end -->
         </div>
     </div>
-</div><!-- 返回顶部 -->
+</div>
+<!-- 返回顶部 -->
 
 <script type="text/javascript" src="./statics/plugin/Bootstrap/js/bootstrap.min.js?version=3.3.2"></script>
 <script type="text/javascript" src="./statics/plugin/jquery.lazyload.min.js?version=1.9.1"></script>
