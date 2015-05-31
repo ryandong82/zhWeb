@@ -27,7 +27,7 @@ var ScrollToTop=ScrollToTop||{
 ScrollToTop.setup();
 
 // 懒加载
-$("img.lazy").lazyload({ threshold : 50 });
+
 
 // 技术支持
 console.log('If you have any questions, please do not hesitate to contact me.');
