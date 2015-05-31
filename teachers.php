@@ -168,7 +168,10 @@ include("main_nav.php");
                                 <div class="tab-pane fade" id="teacher-<?= $arr_group_pane["Id"] ?>">
                                     <?php
                                     $group_id = $arr_group_pane["Id"];
-                                    $res_teacher = mysql_query("select Id, teacher_name, teacher_descript, teacher_photo, order_num, create_date, group_id, visible, content from teachers where ifnull(visible, 1) = 1 and group_id = $group_id order by order_num");
+                                    $res_teacher = mysql_query(
+                                        "select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
+                                            a.group_id, a.visible, a.content, teacher_group.group_name from teachers a left join teacher_group on a.group_id = teacher_group.Id
+                                            left join uploaded_res c on a.teacher_photo = c.Id where ifnull(a.visible, 1) = 1 and a.group_id = $group_id order by a.order_num");
                                     if ($res_teacher) {
                                         while ($arr_teacher = mysql_fetch_array($res_teacher)) {
                                             ?>
@@ -177,7 +180,7 @@ include("main_nav.php");
                                                 <a href="./teacher.php?id=<?= $arr_teacher["Id"] ?>"
                                                    class="thumbnail col-xs-5"> <img class='lazy'
                                                                                     src="./statics/images/boya/t-face.jpg"
-                                                                                    data-original="./statics/images/upload/20140827114658159.jpg"
+                                                                                    data-original="./statics/images/upload/<?=$arr_teacher["filename"]?>"
                                                                                     width="115"
                                                                                     height="165"
                                                                                     style='height:164px;'></a>

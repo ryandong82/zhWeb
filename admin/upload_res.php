@@ -10,6 +10,7 @@ function get_extension($file)
     return substr(strrchr($file, '.'), 1);
 }
 
+
 if ($_FILES['myFile']['error'] == UPLOAD_ERR_OK) {
     $msec = explode(" ", microtime());
     //$file_info = pathinfo($_FILES['myFile']['tmp_name']);

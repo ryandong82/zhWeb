@@ -178,51 +178,39 @@ include("main_nav.php");
     <h5>
         <span class="bg-boya">名师介绍</span>
         <small class="more pull-right">
-            <a href="http://www.boyaceo.com/teachers-15-1.html">more</a>
+            <a href="./teachers.php">more</a>
         </small>
     </h5>
+    <?php
+    require_once("./dbconn.php");
+    $result = mysql_query("select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
+      a.group_id, a.visible, a.content, teacher_group.group_name from teachers a left join teacher_group on a.group_id = teacher_group.Id
+      left join uploaded_res c on a.teacher_photo = c.Id where ifnull(a.visible, 1) = 1 and ifnull(a.show_in_intro, 0) = 1
+      order by order_num limit 0, 4");
+
+    ?>
     <div class="sidebar-right">
         <div class="row">
-            <div class="teacher-single col-xs-6">
-                <a href="http://www.boyaceo.com/teacher-26-92-1.html" class="thumbnail">
-                    <img class='lazy' src="./statics/images/boya/t-face.jpg"
-                         data-original="./statics/images/upload/20140827114658159.jpg"
-                         style="width:80px!important;width:115px!important;"></a>
+            <?php
+            if ($result) {
+                while ($arr_result = mysql_fetch_array($result)) {
+                    ?>
+                    <div class="teacher-single col-xs-6">
+                        <a href="./teacher.php?id=<?= $arr_result["Id"]?>" class="thumbnail">
+                            <img class='lazy' src="./statics/images/boya/t-face.jpg"
+                                 data-original="./statics/images/upload/<?=$arr_result["filename"]?>"
+                                 style="width:80px!important;width:115px!important;"></a>
 
-                <p class='text-center'>
-                    <a href="http://www.boyaceo.com/teacher-26-92-1.html" class="blue">宋国青</a>
-                </p>
-            </div>
-            <div class="teacher-single col-xs-6">
-                <a href="http://www.boyaceo.com/teacher-30-54-1.html" class="thumbnail">
-                    <img class='lazy' src="./statics/images/boya/t-face.jpg"
-                         data-original="./statics/images/upload/20140826042518280.jpg"
-                         style="width:80px!important;width:115px!important;"></a>
-
-                <p class='text-center'>
-                    <a href="http://www.boyaceo.com/teacher-30-54-1.html" class="blue">林毅夫</a>
-                </p>
-            </div>
-            <div class="teacher-single col-xs-6">
-                <a href="http://www.boyaceo.com/teacher-30-66-1.html" class="thumbnail">
-                    <img class='lazy' src="./statics/images/boya/t-face.jpg"
-                         data-original="./statics/images/upload/20140827092612991.jpg"
-                         style="width:80px!important;width:115px!important;"></a>
-
-                <p class='text-center'>
-                    <a href="http://www.boyaceo.com/teacher-30-66-1.html" class="blue">吴涛</a>
-                </p>
-            </div>
-            <div class="teacher-single col-xs-6">
-                <a href="http://www.boyaceo.com/teacher-30-58-1.html" class="thumbnail">
-                    <img class='lazy' src="./statics/images/boya/t-face.jpg"
-                         data-original="./statics/images/upload/20140826042911346.jpg"
-                         style="width:80px!important;width:115px!important;"></a>
-
-                <p class='text-center'>
-                    <a href="http://www.boyaceo.com/teacher-30-58-1.html" class="blue">陈淮</a>
-                </p>
-            </div>
+                        <p class='text-center'>
+                            <a href="./teacher.php?id=<?= $arr_result["Id"]?>" class="blue">
+                                <?=$arr_result["teacher_name"]?>
+                            </a>
+                        </p>
+                    </div>
+                <?php
+                }
+            }
+            ?>
         </div>
         <img src="./statics/images/boya/child_arrow.jpg" class="child_arrow"></div>
 </div>
