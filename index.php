@@ -2157,7 +2157,7 @@ include("main_nav.php");
             </div>
             <!-- 在线申请 start -->
 
-            <form action="http://chat118b.talk99.cn/chat/form?c=10034884&conf=4045&cmd=save"
+            <form
                   method="post" class="form-horizontal" role="form" name="myform" id="application-1">
 
                 <div class="modal-body">
@@ -2294,7 +2294,6 @@ include("main_nav.php");
 <script type="text/javascript" src="./statics/plugin/Bootstrap/js/bootstrap.min.js?version=3.3.2"></script>
 <script type="text/javascript" src="./statics/plugin/jquery.lazyload.min.js?version=1.9.1"></script>
 <script type="text/javascript" src="./statics/js/boya/home.js"></script>
-<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/10034884/10043074.js"></script>
 <!-- 百度统计 -->
 <!--div style="visibility:hidden;"><script type="text/javascript">
     var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

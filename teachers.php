@@ -101,7 +101,9 @@ include("main_nav.php");
                             $offset = $page * 18;
                             if ($page + 1 > $pagecnt)
                                 throw new Exception("页码错误");
-                            $teachers = mysql_query("select Id, teacher_name, teacher_descript, teacher_photo, order_num, create_date, group_id, visible, content from teachers where ifnull(visible, 1) order by order_num limit $offset, 18", $conn);
+                            $teachers = mysql_query("select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
+                                            a.group_id, a.visible, a.content, teacher_group.group_name from teachers a left join teacher_group on a.group_id = teacher_group.Id
+                                            left join uploaded_res c on a.teacher_photo = c.Id where ifnull(a.visible, 1) = 1 order by a.order_num limit $offset, 18");
                             //$teachers = mysql_query("select * from teachers order by order_num ", $conn);
                             while ($row = mysql_fetch_array($teachers)) {
                                 ?>
@@ -109,7 +111,7 @@ include("main_nav.php");
                                     <a href="./teacher.php?Id=<?= $row["Id"] ?>" class="thumbnail col-xs-5"> <img
                                             class='lazy'
                                             src="./statics/images/boya/t-face.jpg"
-                                            data-original="./statics/images/upload/20140827114658159.jpg"
+                                            data-original="./statics/images/upload/<?=$row["filename"]?>"
                                             width="115" height="165"
                                             style='height:164px;'></a>
 
@@ -288,37 +290,37 @@ include("main_nav.php");
         <div id="notGaps" class='well'>
             <ul>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402034837621.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402034837621.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402034900828.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402034900828.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402035220900.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402035220900.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402035406529.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402035406529.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402035427724.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402035427724.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402035455155.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402035455155.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402040724296.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402040724296.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402040744710.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402040744710.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402040804214.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402040804214.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402040826709.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402040826709.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
                 <li>
-                    <img data-original="./uploadfile/2015/0402/20150402040845330.jpg" style="width:250px;height:156px;"
+                    <img data-original="./statics/images/upload/20150402040845330.jpg" style="width:250px;height:156px;"
                          class="lazy"></li>
             </ul>
         </div>
@@ -390,7 +392,7 @@ include("main_nav.php");
             </div>
             <!-- 在线申请 start -->
 
-            <form action="http://chat118b.talk99.cn/chat/form?c=10034884&conf=4045&cmd=save"
+            <form action=""
                   method="post" class="form-horizontal" role="form" name="myform" id="application-1">
 
                 <div class="modal-body">
@@ -539,10 +541,7 @@ include("main_nav.php");
 </div>
 <!-- 返回顶部 -->
 
-<script type="text/javascript" src="./statics/plugin/Bootstrap/js/bootstrap.min.js?version=3.3.2"></script>
-<script type="text/javascript" src="./statics/plugin/jquery.lazyload.min.js?version=1.9.1"></script>
-<script type="text/javascript" src="./statics/js/boya/home.js"></script>
-<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/10034884/10043074.js"></script>
+
 <?php
 mysql_close($conn);
 ?>

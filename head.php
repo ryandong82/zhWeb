@@ -8,9 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" href="./statics/plugin/Bootstrap/css/bootstrap.min.css?version=3.3.2">
+    <link rel="stylesheet" href="./statics/plugin/Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./statics/css/boya/layout.css">
     <script type="text/javascript" src="./statics/plugin/jquery-2.1.3.min.js"></script>
+    <script src="./statics/plugin/jquery.lazyload.min.js"></script>
+    <script src="./statics/plugin/Bootstrap/js/bootstrap.min.js?version=3.3.2"></script>
+    <script src="./statics/js/boya/home.js"></script>
     <!--[if lt IE 9]>
     <script src="./statics/plugin/html5shiv.min.js"></script>
     <script src="./statics/plugin/respond.min.js"></script>
@@ -21,4 +24,10 @@
     <!--[if lte IE 6]>
     <link rel="stylesheet" type="text/css" href="./statics/plugin/Bootstrap/css/bootstrap-ie6.min.css">
     <link rel="stylesheet" type="text/css" href="./statics/plugin/Bootstrap/css/ie.css">
+
     <![endif]-->
+    <script>
+        $(document).ready(function() {
+            $("img.lazy").lazyload({threshold: 50});
+        });
+    </script>
