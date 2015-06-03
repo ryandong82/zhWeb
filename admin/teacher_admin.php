@@ -110,7 +110,7 @@ require_once("../dbconn.php");
                 teacher_name: $("#teacher_name").val(),
                 teacher_desc: $("#teacher_desc").val(),
                 photo_file:$("#photo_file").val(),
-                teacher_content:$("#photo_file").val(),
+                teacher_content:$("#teacher_content").val(),
                 order_num : $("#order_num").val(),
                 group_id : $("#group_id").val(),
                 show_in_intro: $("#show_in_intro").is(':checked')?1:0,
