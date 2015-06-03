@@ -98,65 +98,70 @@ include("main_nav.php");
                             $page = 0;
                             if (isset($_REQUEST["page"]))
                                 $page = $_REQUEST["page"] - 1;
-                            $offset = $page * 18;
                             if ($page + 1 > $pagecnt)
-                                throw new Exception("页码错误");
-                            $teachers = mysql_query("select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
+                                $page = $pagecnt - 1;
+                            $offset = $page * 18;
+                            if ($cnt != 0) {
+                                $teachers = mysql_query("select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
                                             a.group_id, a.visible, a.content, teacher_group.group_name from teachers a left join teacher_group on a.group_id = teacher_group.Id
                                             left join uploaded_res c on a.teacher_photo = c.Id where ifnull(a.visible, 1) = 1 order by a.order_num limit $offset, 18");
-                            //$teachers = mysql_query("select * from teachers order by order_num ", $conn);
-                            while ($row = mysql_fetch_array($teachers)) {
-                                ?>
-                                <div class="col-sm-12 col-md-6 col-lg-4 teacher-single clearfix">
-                                    <a href="./teacher.php?Id=<?= $row["Id"] ?>" class="thumbnail col-xs-5"> <img
-                                            class='lazy'
-                                            src="./statics/images/boya/t-face.jpg"
-                                            data-original="./statics/images/upload/<?=$row["filename"]?>"
-                                            width="115" height="165"
-                                            style='height:164px;'></a>
+                                //$teachers = mysql_query("select * from teachers order by order_num ", $conn);
+                                while ($row = mysql_fetch_array($teachers)) {
+                                    ?>
+                                    <div class="col-sm-12 col-md-6 col-lg-4 teacher-single clearfix">
+                                        <a href="./teacher.php?Id=<?= $row["Id"] ?>" class="thumbnail col-xs-5"> <img
+                                                class='lazy'
+                                                src="./statics/images/boya/t-face.jpg"
+                                                data-original="./statics/images/upload/<?= $row["filename"] ?>"
+                                                width="115" height="165"
+                                                style='height:164px;'></a>
 
-                                    <div class="col-xs-7">
-                                        <h3 class="h4"><a href="./teacher.php?Id=<?= $row["Id"] ?>"
-                                                          class="blue"><?= $row["teacher_name"] ?></a></h3>
+                                        <div class="col-xs-7">
+                                            <h3 class="h4"><a href="./teacher.php?Id=<?= $row["Id"] ?>"
+                                                              class="blue"><?= $row["teacher_name"] ?></a></h3>
 
-                                        <p class="text-muted"><?= $row["teacher_descript"] ?></p>
+                                            <p class="text-muted"><?= $row["teacher_descript"] ?></p>
+                                        </div>
+                                        <a href="./teacher.php?Id=<?= $row["Id"] ?>"
+                                           class="btn btn-default btn-xs"> <span
+                                                class="glyphicon glyphicon-user text-warning"></span> <span
+                                                class="text-warning">个人主页</span></a>
                                     </div>
-                                    <a href="./teacher.php?Id=<?= $row["Id"] ?>" class="btn btn-default btn-xs"> <span
-                                            class="glyphicon glyphicon-user text-warning"></span> <span
-                                            class="text-warning">个人主页</span></a>
-                                </div>
-                            <?php
+                                <?php
+                                }
                             }
                             ?>
                             <!-- 分页 -->
                             <ul class="pager">
                                 <li class="default">
                                     <a class="a1"><?=$cnt?>条</a>
+
                                     <?php
+                                    if ($cnt != 0) {
                                         echo '<a href="teachers.php?page=' . max($page, 1) . '" class="a1">上一页</a>';
-                                    $left = $page + 1 - 5;
-                                    $right = $page + 1 + 4;
+                                        $left = $page + 1 - 5;
+                                        $right = $page + 1 + 4;
 
-                                    $over_left = min($left - 1, 0);
-                                    $over_right = $pagecnt - max($right, $pagecnt);
+                                        $over_left = min($left - 1, 0);
+                                        $over_right = $pagecnt - max($right, $pagecnt);
 
-                                    if ($over_left + $over_right != 0)
-                                    {
-                                        if ($over_left < 0)
-                                            $right += abs($over_left);
-                                        if ($over_right <0)
-                                            $left -= abs($over_right);
-                                    }
+                                        if ($over_left + $over_right != 0) {
+                                            if ($over_left < 0)
+                                                $right += abs($over_left);
+                                            if ($over_right < 0)
+                                                $left -= abs($over_right);
+                                        }
 
-                                    $left = max(1, $left);
-                                    $right = min($pagecnt, $right);
+                                        $left = max(1, $left);
+                                        $right = min($pagecnt, $right);
 
-                                    for ($i = $left; $i <= $right; $i++) {
-                                        echo '<a href="teachers.php?page=' . $i . '">' . $i . '</a>';
-                                    }
-                                    //echo $left . "<br>";
-                                    //echo $right;
+                                        for ($i = $left; $i <= $right; $i++) {
+                                            echo '<a href="teachers.php?page=' . $i . '">' . $i . '</a>';
+                                        }
+                                        //echo $left . "<br>";
+                                        //echo $right;
                                         echo '<a href="teachers.php?page=' . min($page + 2, $pagecnt) . '" class="a1">下一页</a>';
+                                    }
                                     ?>
                             </ul>
                         </div>
