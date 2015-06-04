@@ -390,7 +390,7 @@ include("main_nav.php");
             </p>
 
             <div class="col-xs-12">
-                <form action="http://chat118b.talk99.cn/chat/form?c=10034884&conf=4045&cmd=save" method="post"
+                <form action="" method="post"
                       name="myform" id="application-2" class='form-horizontal'>
                     <div class="form-group">
                         <label for="quickname">姓名</label>
@@ -780,7 +780,6 @@ include("main_nav.php");
 <script type="text/javascript" src="./statics/plugin/Bootstrap/js/bootstrap.min.js?version=3.3.2"></script>
 <script type="text/javascript" src="./statics/plugin/jquery.lazyload.min.js?version=1.9.1"></script>
 <script type="text/javascript" src="./statics/js/boya/home.js"></script>
-<script type="text/javascript" charset="utf-8" src="http://lead.soperson.com/10034884/10043074.js"></script>
 
 </body>
 </html>

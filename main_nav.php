@@ -24,7 +24,7 @@
 <!-- 顶部 end-->
 <!-- 导航 start-->
 <nav>
-    <div class="navbar" role="navigation" id="index_top" style="height:130px">
+    <div class="navbar" role="navigation" id="index_top" style="height:120px">
         <div class="container">
             <div class='ie8_hidden'>
                 <a href="./index.html"><img src="./statics/images/boya/boya_logo.png" class="visible-lg"></a>
@@ -39,7 +39,7 @@
                     <span class="glyphicon glyphicon-list"></span>
                 </button>
             </div>
-            <div class="navbar-right" style="margin:0;padding-top: 60px;"
+            <div class="navbar-right" style="margin:0;padding-top: 30px;"
             ">
             <div class="clearfix  hidden-xs">
                 <img src="./statics/images/boya/boya_06.jpg" class="pull-right wechat_button">
