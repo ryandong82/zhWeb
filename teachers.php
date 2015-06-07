@@ -36,7 +36,7 @@
 <?php
 include("main_nav.php");
 ?>
-   <!-- 导航下色条 start-->
+<!-- 导航下色条 start-->
 <div class="nav_child_bg">
     <div class="container">
         <div class="container-child">
@@ -68,14 +68,14 @@ include("main_nav.php");
                     <hr>
                     <?php
                     require_once("dbconn.php");
-                    $res = mysql_query("select * from teacher_group order by group_orderno limit 0 , 5", $conn);
+                    $res = $pdo->query("select * from teacher_group order by group_orderno limit 0 , 5");
                     ?>
                     <!-- 切换页 -->
                     <ul class="nav nav-tabs" role="tablist" id="myTab">
                         <li class="active"><a href="#all" role="tab" data-toggle="tab">全部师资</a></li>
                         <?php
                         $i = 0;
-                        while ($row = mysql_fetch_array($res)) {
+                        while ($row = $res->fetch()) {
                             ?>
                             <li><a href="#teacher-<?= $row["Id"] ?>" role="tab"
                                    data-toggle="tab"><?= $row["group_name"] ?></a></li>
@@ -91,8 +91,7 @@ include("main_nav.php");
                         <!-- 全部师资 start-->
                         <div class="tab-pane fade active in" id="all">
                             <?php
-                            $res_cnt = mysql_query("select count(1) from teachers where ifnull(visible, 1) = 1");
-                            $result = mysql_fetch_array($res_cnt);
+                            $result = $pdo->query("select count(1) from teachers where ifnull(visible, 1) = 1")->fetch();
                             $cnt = $result[0];
                             $pagecnt = ceil($cnt / 18);
                             $page = 0;
@@ -102,11 +101,11 @@ include("main_nav.php");
                                 $page = $pagecnt - 1;
                             $offset = $page * 18;
                             if ($cnt != 0) {
-                                $teachers = mysql_query("select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
+                                $teachers = $pdo->query("select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
                                             a.group_id, a.visible, a.content, teacher_group.group_name from teachers a left join teacher_group on a.group_id = teacher_group.Id
                                             left join uploaded_res c on a.teacher_photo = c.Id where ifnull(a.visible, 1) = 1 order by a.order_num limit $offset, 18");
                                 //$teachers = mysql_query("select * from teachers order by order_num ", $conn);
-                                while ($row = mysql_fetch_array($teachers)) {
+                                while ($row = $teachers->fetch()) {
                                     ?>
                                     <div class="col-sm-12 col-md-6 col-lg-4 teacher-single clearfix">
                                         <a href="./teacher.php?Id=<?= $row["Id"] ?>" class="thumbnail col-xs-5"> <img
@@ -134,7 +133,7 @@ include("main_nav.php");
                             <!-- 分页 -->
                             <ul class="pager">
                                 <li class="default">
-                                    <a class="a1"><?=$cnt?>条</a>
+                                    <a class="a1"><?= $cnt ?>条</a>
 
                                     <?php
                                     if ($cnt != 0) {
@@ -168,49 +167,48 @@ include("main_nav.php");
                         <!-- 全部师资 end -->
                         <!-- 师资［＋＋］ start-->
                         <?php
-                        $res_group_pane = mysql_query("select * from teacher_group order by group_orderno limit 0 , 5");
-                        if ($res_group_pane) {
-                            while ($arr_group_pane = mysql_fetch_array($res_group_pane)) {
-                                ?>
-                                <div class="tab-pane fade" id="teacher-<?= $arr_group_pane["Id"] ?>">
-                                    <?php
-                                    $group_id = $arr_group_pane["Id"];
-                                    $res_teacher = mysql_query(
-                                        "select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
+
+                        $res_group_pane = $pdo->query("select * from teacher_group order by group_orderno limit 0 , 5");
+                        while ($arr_group_pane = $res_group_pane->fetch()) {
+                            ?>
+                            <div class="tab-pane fade" id="teacher-<?= $arr_group_pane["Id"] ?>">
+                                <?php
+                                $group_id = $arr_group_pane["Id"];
+                                $res_teacher = $pdo->query(
+                                    "select a.Id, a.teacher_name, c.filename, a.teacher_descript, a.show_in_intro, a.teacher_photo, a.order_num, a.create_date,
                                             a.group_id, a.visible, a.content, teacher_group.group_name from teachers a left join teacher_group on a.group_id = teacher_group.Id
                                             left join uploaded_res c on a.teacher_photo = c.Id where ifnull(a.visible, 1) = 1 and a.group_id = $group_id order by a.order_num");
-                                    if ($res_teacher) {
-                                        while ($arr_teacher = mysql_fetch_array($res_teacher)) {
-                                            ?>
-
-                                            <div class="col-sm-12 col-md-6 col-lg-4 teacher-single clearfix">
-                                                <a href="./teacher.php?id=<?= $arr_teacher["Id"] ?>"
-                                                   class="thumbnail col-xs-5"> <img class='lazy'
-                                                                                    src="./statics/images/boya/t-face.jpg"
-                                                                                    data-original="./statics/images/upload/<?=$arr_teacher["filename"]?>"
-                                                                                    width="115"
-                                                                                    height="165"
-                                                                                    style='height:164px;'></a>
-
-                                                <div class="col-xs-7">
-                                                    <h3 class="h4"><a href="./teacher.php?id=<?= $arr_teacher["Id"] ?>"
-                                                                      class="blue"><?= $arr_teacher["teacher_name"] ?></a>
-                                                    </h3>
-
-                                                    <p class="text-muted"><?= $arr_teacher["teacher_descript"] ?></p>
-                                                </div>
-                                                <a href="./teacher.php?id=<?= $arr_teacher["Id"] ?>"
-                                                   class="btn btn-default btn-xs"> <span
-                                                        class="glyphicon glyphicon-user text-warning"></span> <span
-                                                        class="text-warning">个人主页</span></a>
-                                            </div>
-                                        <?php
-                                        }
-                                    }
+                                while ($arr_teacher = $res_teacher->fetch()) {
                                     ?>
-                                </div>
-                            <?php
-                            }
+
+                                    <div class="col-sm-12 col-md-6 col-lg-4 teacher-single clearfix">
+                                        <a href="./teacher.php?id=<?= $arr_teacher["Id"] ?>"
+                                           class="thumbnail col-xs-5"> <img class='lazy'
+                                                                            src="./statics/images/boya/t-face.jpg"
+                                                                            data-original="./statics/images/upload/<?= $arr_teacher["filename"] ?>"
+                                                                            width="115"
+                                                                            height="165"
+                                                                            style='height:164px;'></a>
+
+                                        <div class="col-xs-7">
+                                            <h3 class="h4"><a href="./teacher.php?id=<?= $arr_teacher["Id"] ?>"
+                                                              class="blue"><?= $arr_teacher["teacher_name"] ?></a>
+                                            </h3>
+
+                                            <p class="text-muted"><?= $arr_teacher["teacher_descript"] ?></p>
+                                        </div>
+                                        <a href="./teacher.php?id=<?= $arr_teacher["Id"] ?>"
+                                           class="btn btn-default btn-xs"> <span
+                                                class="glyphicon glyphicon-user text-warning"></span> <span
+                                                class="text-warning">个人主页</span></a>
+                                    </div>
+                                <?php
+                                }
+
+                                ?>
+                            </div>
+                        <?php
+
                         }
                         ?>
                         <!-- 师资［＋＋］ end-->
@@ -546,9 +544,5 @@ include("main_nav.php");
 </div>
 <!-- 返回顶部 -->
 
-
-<?php
-mysql_close($conn);
-?>
 </body>
 </html>

@@ -64,19 +64,13 @@
                     <a href="./about.php" class='color'>学院介绍</a>
                 </li>
                 <li>
-                    <a href="./courses-10-1.html" class='color'>精品课程</a>
+                    <a href="./courses-10-1.html" class='color'>课程介绍</a>
                 </li>
                 <li>
-                    <a href="./teachers.php" class='color'>师资</a>
+                    <a href="./teachers.php" class='color'>师资介绍</a>
                 </li>
                 <li>
-                    <a href="./about-44.html" class='color'>课程简章</a>
-                </li>
-                <li>
-                    <a href="./list-9-1.html" class='color'>新闻中心</a>
-                </li>
-                <li>
-                    <a href="./index.php?m=special&c=index&specialid=7&pc_hash=5hLyMm" class='color'>博雅私董会</a>
+                    <a href="./about-44.html" class='color'>合作客户</a>
                 </li>
                 <li>
                     <a href="./about-46.html" class='color'>联系我们</a>

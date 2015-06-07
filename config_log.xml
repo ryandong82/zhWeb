@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="default" class="LoggerAppenderPDO">
+        <param name="dsn" value="mysql:host=localhost;dbname=zhweb" />
+        <param name="user" value="zhweb" />
+        <param name="password" value="dr820428" />
+        <param name="table" value="zhweb" />
+    </appender>
+    <root>
+        <appender_ref ref="default" />
+    </root>
+</configuration>
