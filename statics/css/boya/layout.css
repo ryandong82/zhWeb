@@ -42,8 +42,9 @@ div#index_top .navbar-toggle{background: #F0AD4E;color: white;border:1px solid #
 div#index_top .navbar-toggle .icon-bar{color: white;}
 div#index_top .navbar-right ul li{list-style: none;margin-left: 50px;font-size: 15px;}
 div#index_top .navbar-right div{position: relative;}
-div#index_top .navbar-right div p{padding: 11px 0;padding-bottom: 4px;}
-div#index_top .navbar-right div img{cursor: pointer;margin-left: 10px;margin-top: 5px;}
+div#index_top .navbar-right div p{margin: 21px 0;padding-bottom: 4px;margin-top:51px;}
+div#index_top .navbar-right div img{cursor: pointer;margin-left: 10px;margin-top: 46px;}
+/*div#index_top .navbar-right div img{margin: 21px 0;padding-bottom: 4px;}*/
 div#index_top .navbar-right img.wechat_img{position: absolute;right: 0;z-index: 100;top: 25px;display: none;}
 div#index_top ul#navbar-collapse-1{padding-right: 0;}
 /*上导航　end*/

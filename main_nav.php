@@ -24,12 +24,8 @@
 <!-- 顶部 end-->
 <!-- 导航 start-->
 <nav>
-    <div class="navbar" role="navigation" id="index_top" style="height:120px">
+    <div class="navbar" role="navigation" id="index_top">
         <div class="container">
-            <div class='ie8_hidden'>
-                <a href="./index.html"><img src="./statics/images/boya/boya_logo.png" class="visible-lg"></a>
-                <a href="./index.html"><img src="./statics/images/boya/sm-logo.jpg" class="hidden-lg"></a>
-            </div>
             <div class="clearfix"></div>
             <div class="navbar-header">
                 <a class="navbar-brand" href="./index.html">
@@ -39,48 +35,48 @@
                     <span class="glyphicon glyphicon-list"></span>
                 </button>
             </div>
-            <div class="navbar-right" style="margin:0;padding-top: 30px;"
-            ">
-            <div class="clearfix  hidden-xs">
-                <img src="./statics/images/boya/boya_06.jpg" class="pull-right wechat_button">
-                <img src="./statics/images/boya/weixin_img.png" class='wechat_img'>
-                <script type="text/javascript">
-                    $('.wechat_button,.wechat_img').hover(function () {
-                        $('.wechat_img').show();
-                    }, function () {
-                        $('.wechat_img').hide();
-                    })
-                </script>
-                <p class="pull-right text-warning">
-                    <span class="h5" style="font-size:13px;">博雅决定高度&nbsp;&nbsp;平台成就未来</span>
-                    <!-- <span class="text-primary h4">4000－858－602</span> -->
-                </p>
-            </div>
-            <ul class="navbar-nav  collapse navbar-collapse" id="navbar-collapse-1">
-                <li>
-                    <a href="./" class='color'>首页</a>
-                </li>
-                <li>
-                    <a href="./about.php" class='color'>学院介绍</a>
-                </li>
-                <li>
-                    <a href="./courses-10-1.html" class='color'>课程介绍</a>
-                </li>
-                <li>
-                    <a href="./teachers.php" class='color'>师资介绍</a>
-                </li>
-                <li>
-                    <a href="./about-44.html" class='color'>合作客户</a>
-                </li>
-                <li>
-                    <a href="./about-46.html" class='color'>联系我们</a>
-                </li>
-                <!-- <li><a href="javascript:void(0);" class="fuzzy99 hidden-xs" target="_self">联系我们</a></li> -->
-                <!-- <li><a href="javascript:void(0);" onclick="boya_application()" target="_self">报名</a></li> -->
+            <div class="navbar-right" style="margin:0;">
 
-            </ul>
+                <div class="clearfix">
+                    <img src="./statics/images/boya/boya_06.jpg" class="pull-right wechat_button">
+                    <img src="./statics/images/boya/weixin_img.png" class='wechat_img'>
+                    <script type="text/javascript">
+                        $('.wechat_button,.wechat_img').hover(function () {
+                            $('.wechat_img').show();
+                        }, function () {
+                            $('.wechat_img').hide();
+                        })
+                    </script>
+                    <p class="pull-right text-warning">
+                        <span class="h5" style="font-size:13px;">博雅决定高度&nbsp;&nbsp;平台成就未来</span>
+                        <!-- <span class="text-primary h4">4000－858－602</span> -->
+                    </p>
+                </div>
+                <ul class="navbar-nav collapse navbar-collapse" id="navbar-collapse-1">
+                    <li>
+                        <a href="./" class='color'>首页</a>
+                    </li>
+                    <li>
+                        <a href="./about.php" class='color'>学院介绍</a>
+                    </li>
+                    <li>
+                        <a href="./courses-10-1.html" class='color'>课程介绍</a>
+                    </li>
+                    <li>
+                        <a href="./teachers.php" class='color'>师资介绍</a>
+                    </li>
+                    <li>
+                        <a href="./about-44.html" class='color'>合作客户</a>
+                    </li>
+                    <li>
+                        <a href="./contact.php" class='color'>联系我们</a>
+                    </li>
+                    <!-- <li><a href="javascript:void(0);" class="fuzzy99 hidden-xs" target="_self">联系我们</a></li> -->
+                    <!-- <li><a href="javascript:void(0);" onclick="boya_application()" target="_self">报名</a></li> -->
+
+                </ul>
+            </div>
         </div>
-    </div>
     </div>
 </nav>
 <!-- 导航 end-->

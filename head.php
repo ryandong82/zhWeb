@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./statics/css/boya/layout.css">
     <script type="text/javascript" src="./statics/plugin/jquery-2.1.3.min.js"></script>
     <script src="./statics/plugin/jquery.lazyload.min.js"></script>
-    <script src="./statics/plugin/Bootstrap/js/bootstrap.min.js?version=3.3.2"></script>
+    <script src="./statics/plugin/Bootstrap/js/bootstrap.min.js"></script>
     <script src="./statics/js/boya/home.js"></script>
     <!--[if lt IE 9]>
     <script src="./statics/plugin/html5shiv.min.js"></script>
