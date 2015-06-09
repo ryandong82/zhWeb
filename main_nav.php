@@ -48,7 +48,7 @@
                         })
                     </script>
                     <p class="pull-right text-warning">
-                        <span class="h5" style="font-size:13px;">博雅决定高度&nbsp;&nbsp;平台成就未来</span>
+                        <span class="h5" style="font-size:13px;">为企业及领导者的发展提供最佳学习平台</span>
                         <!-- <span class="text-primary h4">4000－858－602</span> -->
                     </p>
                 </div>

@@ -4,7 +4,7 @@
         <param name="dsn" value="mysql:host=localhost;dbname=zhweb" />
         <param name="user" value="zhweb" />
         <param name="password" value="dr820428" />
-        <param name="table" value="zhweb" />
+        <param name="table" value="log4php_log" />
     </appender>
     <root>
         <appender_ref ref="default" />

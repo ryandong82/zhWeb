@@ -5,6 +5,14 @@
     <?php
     include("head.php");
     ?>
+    <style>
+        .map_container{
+            padding: 10px;
+        }
+        iframe{
+            border:0px none;
+        }
+    </style>
 </head>
 <body>
 
@@ -46,11 +54,18 @@ include("main_nav.php");
                 </p>
                 <!-- 内容 -->
                 <article>
-                    <div class="article_content">电话：400-876-1791<br/>
+                    <div class="article_content">电话：010-58406365<br/>传真：010-59713190
                         <br/>
-                        地址：北京市海淀区北大资源东楼<br/>
+                        地址：北京市海淀区上地十街辉煌国际大厦2006<br/>
+                        联系人：李老师<br/>
+                    </div>
+                    <div id="map_container">
+                    <iframe src="map_frame.html" style="height:400px;width:100%;">
+
+                    </iframe>
                     </div>
                 </article>
+
                 <!-- 分享 start -->
                 <div class="bdsharebuttonbox pull-right">
                     <a href="#" class="bds_more" data-cmd="more"></a>
