@@ -183,10 +183,10 @@
 
 </div>
 </body>
-<script src="./scripts/jquery-2.1.3.min.js"></script>
+<script src="./Scripts/jquery-2.1.3.min.js"></script>
 <script src="../statics/plugin/Bootstrap/js/bootstrap.min.js"></script>
-<script src="./scripts/bootstrap-wysiwyg.js"></script>
-<script src="./scripts/jquery.hotkeys.js"></script>
+<script src="./Scripts/bootstrap-wysiwyg.js"></script>
+<script src="./Scripts/jquery.hotkeys.js"></script>
 <script>
     $(function () {
         function initToolbarBootstrapBindings() {
