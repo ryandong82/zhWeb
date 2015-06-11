@@ -18,6 +18,10 @@
 
         }
 
+        body {
+            font-family: "Microsoft YaHei", "微软雅黑", "SimSun", "宋体";
+        }
+
         .main_navigation .menu {
             padding: 0px;
             margin: 0px;
@@ -38,9 +42,11 @@
 
         #nav_main.main_navigation .menu li.nav-active {
             border-bottom: 2px solid #e67e22;
+            color: #ffffff;
             margin-bottom: -2px;
         }
-        #form_btn.form-group{
+
+        #form_btn.form-group {
             margin-top: 1em;
             text-align: center;
         }
@@ -54,14 +60,14 @@
             <div class="col-md-12">
                 <div class="collapse navbar-collapse">
                     <ul class="menu">
-                        <li class="nav-active"><a href="#">师资列表</a></li>
-                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                aria-expanded="false" href="#">主题活动<b
+                        <li><a href="#">师资列表</a></li>
+                        <li class="nav-active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                           aria-expanded="false" href="#">主题活动<b
                                     class="caret"></b></a>
 
                             <ul class="dropdown-menu" role="menu" id="navbody">
-                                <li><a href="#">发布</a></li>
-                                <li><a href="#">全部</a></li>
+                                <li><a href="admin_articles.php">发布</a></li>
+                                <li><a href="article_list.php">全部</a></li>
                             </ul>
 
                         </li>
@@ -77,9 +83,29 @@
     <div class="hero-unit">
         <h1>新增文章<br>
         </h1>
+
         <div class="form-group">
-            <label>文章标题</label><input class="form-control" type="text" name="article_title" id="article_title" placeholder="在这里输入标题">
+            <input class="form-control" type="text" name="article_title" id="article_title"
+                   placeholder="在这里输入标题">
         </div>
+        <div class="form-group pull-left">
+            <select class="form-control" name="article_category" id="article_category">
+                <option value="-1">==选择分类==
+                </option>
+                <?php
+                require_once("../dbconn.php");
+                $result = $pdo->query("select * from article_category");
+                while ($arr = $result->fetch()) {
+                    ?>
+                    <option value="<?= $arr["Id"] ?>"><?= $arr["cate_name"] ?>
+                    </option>
+                <?php
+                }
+                ?>
+
+            </select>
+        </div>
+        <div class="clearfix"></div>
         <hr>
         <div class="btn-toolbar" data-role="editor-toolbar" data-target="#editor">
             <div class="btn-group">
@@ -172,11 +198,11 @@
         </div>
 
         <div id="editor" contenteditable="true">
-            Go ahead…
+
         </div>
 
         <div class="form-group" id="form_btn">
-            <button class="btn">确定</button>
+            <button class="btn" id="btn_ok">确定</button>
             <button class="btn">返回</button>
         </div>
     </div>
@@ -188,42 +214,74 @@
 <script src="./Scripts/bootstrap-wysiwyg.js"></script>
 <script src="./Scripts/jquery.hotkeys.js"></script>
 <script>
-    $(function () {
-        function initToolbarBootstrapBindings() {
-            var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
-                    'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
-                    'Times New Roman', 'Verdana'],
-                fontTarget = $('[title=Font]').siblings('.dropdown-menu');
-            $.each(fonts, function (idx, fontName) {
-                fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
-            });
-            $('a[title]').tooltip({container: 'body'});
-            $('.dropdown-menu input').click(function () {
-                return false;
-            })
-                .change(function () {
-                    $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
-                })
-                .keydown('esc', function () {
-                    this.value = '';
-                    $(this).change();
-                });
+    function post_article() {
+        var form_data = new FormData();
+        if ($("#article_title").val() == "") return;
+        if ($("#editor").cleanHtml() == "") return;
+        if ($("#article_category").val() == "") return;
 
-            $('[data-role=magic-overlay]').each(function () {
-                var overlay = $(this), target = $(overlay.data('target'));
-                overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
-            });
-            $('#voiceBtn').hide();
-            // if ("onwebkitspeechchange"  in document.createElement("input")) {
-            //   var editorOffset = $('#editor').offset();
-            //   $('#voiceBtn').css('position','absolute').offset({top: editorOffset.top, left: editorOffset.left+$('#editor').innerWidth()-35});
-            // } else {
-            //   $('#voiceBtn').hide();
-            // }
-        };
-        initToolbarBootstrapBindings();
-        $('#editor').wysiwyg();
-        window.prettyPrint && prettyPrint();
-    });
+        form_data.append("article_category", $("#article_category").val());
+        form_data.append("article_title", $("#article_title").val());
+        form_data.append("article_content", $("#editor").cleanHtml());
+        $.ajax({
+            url: "new_article.php",
+            type: "POST",
+            data: form_data,
+            processData: false,  // 告诉jQuery不要去处理发送的数据
+            contentType: false,   // 告诉jQuery不要去设置Content-Type请求头
+            dataType: "json",
+            success: function (_data) {
+                if (_data.success == 1) {
+                    location = "article_list.php";
+                }
+            },
+            error: function (_data) {
+                alert("保存数据失败！");
+            }
+
+        });
+    }
+
+
+    $(
+        function () {
+            function initToolbarBootstrapBindings() {
+                var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+                        'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+                        'Times New Roman', 'Verdana'],
+                    fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+                $.each(fonts, function (idx, fontName) {
+                    fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
+                });
+                $('a[title]').tooltip({container: 'body'});
+                $('.dropdown-menu input').click(function () {
+                    return false;
+                })
+                    .change(function () {
+                        $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
+                    })
+                    .keydown('esc', function () {
+                        this.value = '';
+                        $(this).change();
+                    });
+
+                $('[data-role=magic-overlay]').each(function () {
+                    var overlay = $(this), target = $(overlay.data('target'));
+                    overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+                });
+                $('#voiceBtn').hide();
+                // if ("onwebkitspeechchange"  in document.createElement("input")) {
+                //   var editorOffset = $('#editor').offset();
+                //   $('#voiceBtn').css('position','absolute').offset({top: editorOffset.top, left: editorOffset.left+$('#editor').innerWidth()-35});
+                // } else {
+                //   $('#voiceBtn').hide();
+                // }
+            };
+            initToolbarBootstrapBindings();
+            $('#editor').wysiwyg();
+            $("#btn_ok").click(post_article);
+            window.prettyPrint && prettyPrint();
+        }
+    );
 </script>
 </html>
