@@ -14,13 +14,13 @@ function return_error($msg)
     );
     return $rel_arr;
 }
-function get_extension($file)
-{
-    return substr(strrchr($file, '.'), 1);
-}
-$msec = explode(" ", microtime());
+
+require_once 'pub_funcs';
+
+//$msec = explode(" ", microtime());
 //$file_info = pathinfo($_FILES['myFile']['tmp_name']);
-$photo_file = date("Y_m_d_H_i_s") . $msec[1] . "." . get_extension($_FILES["myFile"]["name"]);
+$photo_file = gen_file_name(get_extension($_FILES["myFile"]["name"])); 
+//date("Y_m_d_H_i_s") . $msec[1] . "." . get_extension($_FILES["myFile"]["name"]);
 
 $teacher_name = $_POST["teacher_name"];
 $teacher_desc = $_POST["teacher_desc"];

@@ -60,7 +60,7 @@
             <div class="col-md-12">
                 <div class="collapse navbar-collapse">
                     <ul class="menu">
-                        <li><a href="#">师资列表</a></li>
+                        <li><a href="teacher_admin.php">师资列表</a></li>
                         <li class="nav-active dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button"
                                                            aria-expanded="false" href="#">主题活动<b
                                     class="caret"></b></a>

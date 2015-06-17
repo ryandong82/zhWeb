@@ -15,10 +15,7 @@ function return_error($msg)
     return $rel_arr;
 }
 
-function get_extension($file)
-{
-    return substr(strrchr($file, '.'), 1);
-}
+require_once 'pub_funcs.php';
 
 $teacher_id = $_POST["teacher_id"];
 $teacher_name = $_POST["teacher_name"];
@@ -35,8 +32,8 @@ $group_id = $_POST["group_id"];
 require_once("../dbconn.php");
 
 if ($_FILES["myFile"]["name"] != "") {
-    $msec = explode(" ", microtime());
-    $photo_file = date("Y_m_d_H_i_s") . $msec[1] . "." . get_extension($_FILES["myFile"]["name"]);
+    $photo_file = gen_file_name(get_extension($_FILES["myFile"]["name"]));
+    
     $new_file = $_SERVER['DOCUMENT_ROOT'] . "/statics/images/upload/$photo_file";
     $file_mime = $_FILES["myFile"]["type"];
 
