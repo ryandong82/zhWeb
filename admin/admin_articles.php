@@ -15,7 +15,6 @@
             border-top: 1px solid #1b1b1b;
             border-bottom: 2px solid #e1e1e1;
             margin-bottom: 35px;
-
         }
 
         body {
